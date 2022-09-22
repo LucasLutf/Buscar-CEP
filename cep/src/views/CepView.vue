@@ -18,24 +18,26 @@ export default {
 </script>
 <template>
   <header class="corpo">
-    <h1>Buscar CEP</h1>
-    <form @submit.prevent="buscar">
-      <input
-        type="text"
-        class="pesq"
-        v-model="cep"
-        placeholder="Digite o CEP"
-      />
-      <button type="submit" class="btn">Buscar</button>
-    </form>
-    <form class="end">
-      <label for="rua">Rua</label>
-      <input type="text" v-model="endereco.logradouro" />
-      <label for="num">Cidade</label>
-      <input type="text" v-model="endereco.localidade" />
-      <label for="bairro">Bairro</label>
-      <input type="text" v-model="endereco.bairro" />
-    </form>
+    <div class="fundo">
+      <h1>Buscar CEP</h1>
+      <form @submit.prevent="buscar">
+        <input
+          type="text"
+          class="pesq"
+          v-model="cep"
+          placeholder="Digite o CEP"
+        />
+        <button type="submit" class="btn">Buscar</button>
+      </form>
+      <form class="end">
+        <label for="rua">Rua</label>
+        <input type="text" v-model="endereco.logradouro" />
+        <label for="num">Cidade</label>
+        <input type="text" v-model="endereco.localidade" />
+        <label for="bairro">Bairro</label>
+        <input type="text" v-model="endereco.bairro" />
+      </form>
+    </div>
   </header>
 </template>
 
@@ -46,11 +48,32 @@ export default {
   align-items: center;
   justify-content: center;
   height: 80vh;
+  color: white;
+}
+.fundo {
+  background-color: rgb(82, 80, 80);
+  padding: 50px;
+  height: 40%;
+  border-radius: 24px;
+  box-shadow: 0 0 20px 0 rgb(70, 70, 70); 
+}
+.fundo h1 {
+  display: flex;
+  justify-content: center;
+  margin-top: -5px;
 }
 .end {
   display: flex;
   flex-direction: column;
-  width: 15%;
+  padding: 35px;
+}
+.end label {
+  margin: 5px;
+}
+.end input {
+  padding: 7px;
+  border-radius: 5px;
+  border: none;
 }
 h1 {
   font-size: 30px;
