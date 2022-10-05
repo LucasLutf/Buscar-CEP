@@ -46,8 +46,8 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 80vh;
+  justify-content: space-around;
+  height: 100vh;
   color: white;
 }
 .fundo {
@@ -55,7 +55,7 @@ export default {
   padding: 50px;
   height: 40%;
   border-radius: 24px;
-  box-shadow: 0 0 20px 0 rgb(70, 70, 70); 
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.726);
 }
 .fundo h1 {
   display: flex;
